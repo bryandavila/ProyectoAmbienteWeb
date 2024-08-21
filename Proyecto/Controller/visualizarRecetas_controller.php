@@ -9,8 +9,6 @@ function ConsultarRecetas() {
             echo "<tr>";
             echo "<td>" . $row["nombre"] . "</td>"; 
             echo "<td>" . $row["dosis"] . "</td>";
-            echo "<td>" . $row["fecha_emision"] . "</td>";
-    
             echo "</tr>";
         }
     } else {

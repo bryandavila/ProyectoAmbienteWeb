@@ -1,4 +1,4 @@
-<?php  include_once '../Controller/visualizarReceta_controller.php';
+<?php include_once '../Controller/visualizarRecetas_controller.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -36,16 +36,16 @@ $nombreUsuario = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : '';
 
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+         Tu medico
         </a>
       </div>
       <div class="navbar-inner">
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link active" href="homeMedicos.php">
+              <a class="nav-link active" href="home.php">
                 <i class="ni ni-tv-2 text-primary"></i>
-                <span class="nav-link-text">Dashboard Médico</span>
+                <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
           </ul>
@@ -56,15 +56,21 @@ $nombreUsuario = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : '';
           </h6>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="asignarPrescripciones.php">
+              <a class="nav-link" href="VisualizarRecetas.php">
                 <i class="ni ni-tv-2 text-primary"></i>
-                <span class="nav-link-text">Asignar prescripciones</span>
+                <span  class="nav-link-text">Visualizar Recetas</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="VisualizarMedicamentos.php">
+              <a class="nav-link" href="dashboard_medico.php">
                 <i class="ni ni-tv-2 text-primary"></i>
-                <span class="nav-link-text">Visualizar Medicamentos</span>
+                <span class="nav-link-text">Programacion de Citas Medicas</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard_medico.php">
+                <i class="ni ni-tv-2 text-primary"></i>
+                <span class="nav-link-text">Historial Médico</span>
               </a>
             </li>
           </ul>
@@ -124,9 +130,9 @@ $nombreUsuario = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : '';
                       <h6 class="text-overflow m-0">Bienvenido</h6>
                     </div>
                     <div class="dropdown-divider"></div>
-                    <a href="dashboard_paciente.php" class="dropdown-item">
+                    <a href="VisualizarRecetas.php" class="dropdown-item">
                       <i class="ni ni-tv-2"></i>
-                      <span>Dashboard Paciente</span>
+                      <span>Visualizar Recetas</span>
                     </a>
                     <a href="dashboard_medico.php" class="dropdown-item">
                       <i class="ni ni-tv-2"></i>
@@ -152,22 +158,6 @@ $nombreUsuario = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : '';
         </div>
       </div>
     </div>
-    <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Id Medicamento</th>
-                            <th>Nombre</th>
-                            <th>Descripcion</th>
-                            <th>Stock</th>
-                            <th>Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                          ConsultarRecetas();
-                        ?>
-                    </tbody>
-                </table>
     <!-- Footer -->
     <footer class="footer pt-0">
       <div class="row align-items-center justify-content-lg-between">

@@ -67,6 +67,12 @@ $nombreUsuario = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : '';
                 <span class="nav-link-text">Programacion de Citas Medicas</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard_medico.php">
+                <i class="ni ni-tv-2 text-primary"></i>
+                <span class="nav-link-text">Historial Médico</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -131,6 +137,10 @@ $nombreUsuario = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : '';
                     <a href="dashboard_medico.php" class="dropdown-item">
                       <i class="ni ni-tv-2"></i>
                       <span>Dashboard Médico</span>
+                    </a>
+                    <a href="dashboard_medico.php" class="dropdown-item">
+                      <i class="ni ni-tv-2"></i>
+                      <span>Historial Médico</span>
                     </a>
                     <a href="login.php" class="dropdown-item">
                       <i class="ni ni-user-run"></i>
