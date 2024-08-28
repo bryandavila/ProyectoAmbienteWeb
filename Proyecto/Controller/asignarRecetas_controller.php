@@ -16,6 +16,8 @@ if(isset($_POST["AsignarReceta"])) {
     } else {
         // Manejar el error
         echo "Error al asignar la receta.";
+
+        //hola
     }
 }
 ?>
